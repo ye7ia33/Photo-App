@@ -25,7 +25,7 @@ final class PhotoListPresenter: NSObject, PhotoListViewProtocol {
     //MARK: call tableViewDidSelectItem method after user touch on cell to open details screen.
     internal func tableViewDidSelectItem(indexPath: IndexPath) {
         guard let repo = self.displayedList?[safe: indexPath.row] else { return }
-        self.delegate?.didOpenDetailsScreen(repoModel: repo)
+        self.delegate?.didOpenDetailsScreen(photoModel: repo)
     }
     
     internal func loadMore() {

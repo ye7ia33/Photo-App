@@ -13,7 +13,7 @@ typealias PhotoArrayList = [Photo]
 */
 protocol PhotoListPresenterProtocol: AnyObject {
     func reloadData()
-    func didOpenDetailsScreen(repoModel: Photo)
+    func didOpenDetailsScreen(photoModel: Photo)
     func didGetErrorFromServerWithErrorMsg(_ msg: String)
 }
 

@@ -62,13 +62,13 @@ extension PhotoListVC: PhotoListPresenterProtocol {
     }
     
     /** *Open Screen Details Screen* */
-    func didOpenDetailsScreen(repoModel: Photo) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
-//            let detailsPresenter = DetailsPresenter(delegate: vc, repoModel: repoModel)
-//            vc.config(delegate: detailsPresenter)
-//            self.present(vc, animated: true)
-//        }
+    func didOpenDetailsScreen(photoModel: Photo) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController {
+            let detailsPresenter = DetailsPresenter(delegate: vc, photoModel: photoModel)
+            vc.config(delegate: detailsPresenter)
+            self.present(vc, animated: true)
+        }
     }
     
     func reloadData() {

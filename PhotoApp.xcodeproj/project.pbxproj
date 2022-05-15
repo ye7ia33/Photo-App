@@ -31,6 +31,9 @@
 		A8ED739B283078F4006E564F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A8ED739A283078F4006E564F /* Alamofire */; };
 		A8ED739E2830790E006E564F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A8ED739D2830790E006E564F /* SwiftyJSON */; };
 		A8ED73A028307B52006E564F /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ED739F28307B52006E564F /* Repo.swift */; };
+		A8ED73A2283081F4006E564F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ED73A1283081F4006E564F /* DetailsViewController.swift */; };
+		A8ED73A528308274006E564F /* DetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ED73A428308274006E564F /* DetailsPresenterProtocol.swift */; };
+		A8ED73A7283082AE006E564F /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ED73A6283082AE006E564F /* DetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		A8ED739528307866006E564F /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		A8ED7397283078A6006E564F /* ServerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerRequest.swift; sourceTree = "<group>"; };
 		A8ED739F28307B52006E564F /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		A8ED73A1283081F4006E564F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A8ED73A428308274006E564F /* DetailsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterProtocol.swift; sourceTree = "<group>"; };
+		A8ED73A6283082AE006E564F /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,7 @@
 		A8ED736A28307339006E564F /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				A8ED73A32830826A006E564F /* Protocols */,
 				A8ED736F2830735B006E564F /* Presenter */,
 				A8ED73712830736A006E564F /* View */,
 			);
@@ -172,6 +179,7 @@
 		A8ED736F2830735B006E564F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A8ED73A6283082AE006E564F /* DetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 		A8ED73712830736A006E564F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A8ED73A1283081F4006E564F /* DetailsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +238,14 @@
 				A8ED739528307866006E564F /* PhotoService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A8ED73A32830826A006E564F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A8ED73A428308274006E564F /* DetailsPresenterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,12 +337,15 @@
 				A8ED73A028307B52006E564F /* Repo.swift in Sources */,
 				A8ED738228307432006E564F /* UIImageView+Extension.swift in Sources */,
 				A8ED7393283075B7006E564F /* PhotoListProtocols.swift in Sources */,
+				A8ED73A528308274006E564F /* DetailsPresenterProtocol.swift in Sources */,
 				A8ED738328307432006E564F /* Collection+Extension.swift in Sources */,
 				A8ED7374283073B8006E564F /* PhotoCell.swift in Sources */,
 				A8ED738528307432006E564F /* UITableViewCell+Extension.swift in Sources */,
 				A8ED738828307432006E564F /* CodableHandler.swift in Sources */,
+				A8ED73A2283081F4006E564F /* DetailsViewController.swift in Sources */,
 				A8ED738F2830755B006E564F /* PhotoListVC.swift in Sources */,
 				A8ED738128307432006E564F /* HelperClass.swift in Sources */,
+				A8ED73A7283082AE006E564F /* DetailsPresenter.swift in Sources */,
 				A8ED7398283078A6006E564F /* ServerRequest.swift in Sources */,
 				A8ED735428307293006E564F /* AppDelegate.swift in Sources */,
 				A8ED735628307293006E564F /* SceneDelegate.swift in Sources */,
