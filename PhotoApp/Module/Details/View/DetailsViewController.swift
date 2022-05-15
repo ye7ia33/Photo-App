@@ -9,7 +9,11 @@ import UIKit
 
 final class DetailsViewController: UIViewController {
     private var viewDelegate: DetailsViewProtocol?
-    @IBOutlet private weak var PhotoImageView: UIImageView!
+    @IBOutlet private weak var PhotoImageView: UIImageView! {
+        didSet {
+            PhotoImageView.enableZoom()
+        }
+    }
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var albumIdLabel: UILabel!
 
@@ -40,4 +44,4 @@ extension DetailsViewController: DetailsPresenterProtocol {
         self.albumIdLabel.text = self.viewDelegate?.AlbumId
     }
 }
- 
+
