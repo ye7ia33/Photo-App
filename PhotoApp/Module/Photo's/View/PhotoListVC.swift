@@ -10,7 +10,9 @@ import UIKit
 class PhotoListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var viewDelegate: PhotoListViewProtocol?
-    
+    var currentPage: Int = 1
+    let pageSize: Int = 10 // num of items in one page
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,10 +83,14 @@ extension PhotoListVC: PhotoListPresenterProtocol {
 
 extension PhotoListVC: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        let rowNumber = viewDelegate?.displayedList?.count ?? 0
-        if (rowNumber - 5) == indexPaths.last?.row ?? 0 {
-            self.viewDelegate?.loadMore()
+        let upcomingRows = indexPaths.map { $0.row }
+               if let maxIndex = upcomingRows.max() {
+                  let nextPage: Int = Int(ceil(Double(maxIndex) / Double(pageSize))) + 1
+                  if nextPage > currentPage {
+                      self.viewDelegate?.loadMore()
+                       currentPage = nextPage
+                   }
+               }
         }
-    }
 }
 

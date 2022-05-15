@@ -18,11 +18,12 @@ class PhotoCell: UITableViewCell {
             self.titleLabel.text = ""
         }
     }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
     }
-
+    
     func  config(title: String, imgUrl: String) {
         self.photoImageView.setDefaultImage()
         self.photoImageView?.downloadImage(from: imgUrl)
